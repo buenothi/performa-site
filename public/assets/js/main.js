@@ -122,6 +122,43 @@
     });
   }
 
+  // Vídeos: só carrega o player do YouTube (ou o .mp4) quando a pessoa clica.
+  // Assim a página fica leve e nenhum cookie de terceiro é gravado antes do play.
+  document.querySelectorAll('.video[data-youtube], .video[data-src]').forEach(function (card) {
+    var id = (card.dataset.youtube || '').trim();
+    var src = (card.dataset.src || '').trim();
+    var btn = card.querySelector('.video__play');
+    if (!btn) return;
+    if (!/^[\w-]{11}$/.test(id) && !src) { btn.disabled = true; return; }
+
+    if (id) {
+      var img = card.querySelector('.video__poster img');
+      if (img && !card.dataset.poster) {
+        img.src = 'https://i.ytimg.com/vi/' + id + '/hqdefault.jpg';
+        img.removeAttribute('width'); img.removeAttribute('height');
+      }
+    }
+    btn.addEventListener('click', function () {
+      var frame = btn.parentNode;
+      var title = (card.querySelector('h3') || {}).textContent || 'Vídeo';
+      var el;
+      if (id) {
+        el = document.createElement('iframe');
+        el.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0&modestbranding=1';
+        el.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+        el.allowFullscreen = true;
+        el.referrerPolicy = 'strict-origin-when-cross-origin';
+      } else {
+        el = document.createElement('video');
+        el.src = src; el.controls = true; el.autoplay = true; el.playsInline = true;
+        if (card.dataset.poster) el.poster = card.dataset.poster;
+      }
+      el.title = title;
+      frame.replaceChild(el, btn);
+      el.focus();
+    });
+  });
+
   var ano = document.getElementById('ano');
   if (ano) ano.textContent = new Date().getFullYear();
 })();

@@ -16,7 +16,10 @@
   <meta property="og:title" content="Performa Cloud | TI completa por assinatura para PMEs">
   <meta property="og:description" content="Nuvem, IA, telefonia e gestão com um só parceiro, em uma mensalidade previsível.">
   <meta property="og:url" content="https://www.performacloud.com.br/">
-  <meta property="og:image" content="https://www.performacloud.com.br/assets/img/icon-512.png">
+  <meta property="og:image" content="https://www.performacloud.com.br/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
 
   <script type="application/ld+json">
   {
@@ -59,6 +62,7 @@
         <a href="#setores">Setores</a>
         <a href="#metodo">Método</a>
         <a href="#planos">Planos</a>
+        <a href="#videos">Vídeos</a>
         <a class="btn btn--sm" href="#contato">Diagnóstico gratuito</a>
       </nav>
     </div>
@@ -83,8 +87,25 @@
             <li>Dados protegidos (LGPD)</li>
           </ul>
         </div>
+        <!-- Ilustração do que o cliente recebe: um painel único de TI -->
         <div class="hero__art" aria-hidden="true">
-          <img src="/assets/img/logo.png" alt="" width="354" height="277">
+          <div class="panel-mock">
+            <div class="panel-mock__head">
+              <img src="/assets/img/icon-32.png" alt="" width="24" height="24">
+              <span>Sua TI na Performa</span>
+              <em>Tudo em dia</em>
+            </div>
+            <ul class="panel-mock__list">
+              <li><b>Microsoft 365</b><span>E-mail, Teams e arquivos</span></li>
+              <li><b>Backup em nuvem</b><span>Cópia diária automática</span></li>
+              <li><b>PABX em nuvem</b><span>Ramais no celular</span></li>
+              <li><b>Segurança</b><span>Acesso com MFA</span></li>
+            </ul>
+            <div class="panel-mock__foot">
+              <span>Mensalidade previsível</span>
+              <strong>1 parceiro, 1 fatura</strong>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -193,24 +214,67 @@
       </div>
     </section>
 
+    <!-- Vídeos explicativos
+         Para adicionar um vídeo, copie um <article class="video"> e troque:
+         data-youtube (id do vídeo no YouTube, o trecho depois de "v=" ou de "youtu.be/"),
+         ou data-src (arquivo .mp4 em /assets/video/), o título, a duração e a descrição.
+         O primeiro vídeo da lista aparece em destaque. -->
+    <section class="section section--alt" id="videos">
+      <div class="wrap">
+        <p class="eyebrow">Vídeos</p>
+        <h2>Entenda em poucos minutos</h2>
+        <p class="lead">Vídeos curtos que explicam, sem jargão, como a Performa cuida da tecnologia da sua empresa.</p>
+
+        <div class="videos">
+          <article class="video video--featured" data-youtube="AgQ3VnmtS6M">
+            <div class="video__frame">
+              <button class="video__play" type="button" aria-label="Assistir: WhatsApp com IA">
+                <span class="video__poster" aria-hidden="true">
+                  <img src="/assets/img/og-image.png" alt="" width="1200" height="630" loading="lazy">
+                </span>
+                <span class="video__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+                <span class="video__time">Assistir</span>
+              </button>
+            </div>
+            <div class="video__body">
+              <p class="video__tag">Inteligência artificial</p>
+              <h3>WhatsApp com IA</h3>
+              <p>Veja como um assistente de inteligência artificial atende seus clientes pelo WhatsApp a qualquer hora e passa a conversa para a sua equipe quando precisa.</p>
+              <a class="btn btn--ghost btn--sm" href="#contato">Pedir diagnóstico gratuito</a>
+            </div>
+          </article>
+
+          <article class="video video--soon" aria-label="Próximo vídeo, em produção">
+            <div class="video__frame"><span class="video__soon">Novo vídeo em produção</span></div>
+            <div class="video__body"><h3>Seu telefone no celular: PABX em nuvem</h3><p>Ramais, filas e atendimento automático sem comprar aparelhos.</p></div>
+          </article>
+          <article class="video video--soon" aria-label="Próximo vídeo, em produção">
+            <div class="video__frame"><span class="video__soon">Novo vídeo em produção</span></div>
+            <div class="video__body"><h3>Backup e segurança para PMEs</h3><p>Como proteger os dados da empresa e cumprir a LGPD.</p></div>
+          </article>
+        </div>
+        <p class="fine">Os vídeos do YouTube só carregam quando você clica para assistir.</p>
+      </div>
+    </section>
+
     <!-- Setores -->
-    <section class="section section--alt" id="setores">
+    <section class="section" id="setores">
       <div class="wrap">
         <p class="eyebrow">Para quem</p>
         <h2>Soluções para o seu setor</h2>
         <div class="grid grid--3">
-          <article class="card"><h3>Escritórios de advocacia</h3><p>Documentos sigilosos seguros e busca inteligente em contratos e processos.</p></article>
-          <article class="card"><h3>Profissionais liberais</h3><p>Escritório digital completo: e-mail, arquivos, telefone e agenda de qualquer lugar.</p></article>
-          <article class="card"><h3>Clínicas e consultórios</h3><p>Dados de pacientes protegidos, agendamento automatizado e atendimento telefônico eficiente.</p></article>
-          <article class="card"><h3>Corretoras de seguros e de valores</h3><p>PABX em nuvem, CRM para a carteira e automação de propostas e renovações.</p></article>
-          <article class="card"><h3>Construtoras</h3><p>Obra e escritório conectados: ERP, documentos na nuvem e digitalização de notas e projetos.</p></article>
-          <article class="card"><h3>Pequenas e médias indústrias</h3><p>ERP integrado, notas fiscais lidas por IA e infraestrutura estável para a produção.</p></article>
+          <article class="card"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M7 21h10M5 7h14M5 7l-3 7a3 3 0 0 0 6 0zM19 7l-3 7a3 3 0 0 0 6 0z"/></svg><h3>Escritórios de advocacia</h3><p>Documentos sigilosos seguros e busca inteligente em contratos e processos.</p></article>
+          <article class="card"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></svg><h3>Profissionais liberais</h3><p>Escritório digital completo: e-mail, arquivos, telefone e agenda de qualquer lugar.</p></article>
+          <article class="card"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 5.6a5.5 5.5 0 0 0-7.8 0L12 6.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 22l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/><path d="M8 12h2l1-2 2 4 1-2h2"/></svg><h3>Clínicas e consultórios</h3><p>Dados de pacientes protegidos, agendamento automatizado e atendimento telefônico eficiente.</p></article>
+          <article class="card"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.4 9.3-8 11-4.6-1.7-8-6-8-11V5z"/><path d="M9 12l2 2 4-4"/></svg><h3>Corretoras de seguros e de valores</h3><p>PABX em nuvem, CRM para a carteira e automação de propostas e renovações.</p></article>
+          <article class="card"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 20h20M4 20V10l8-6 8 6v10M9 20v-6h6v6"/></svg><h3>Construtoras</h3><p>Obra e escritório conectados: ERP, documentos na nuvem e digitalização de notas e projetos.</p></article>
+          <article class="card"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 20V9l6 4V9l6 4V5h4l2 15z"/><path d="M2 20h20"/></svg><h3>Pequenas e médias indústrias</h3><p>ERP integrado, notas fiscais lidas por IA e infraestrutura estável para a produção.</p></article>
         </div>
       </div>
     </section>
 
     <!-- Método -->
-    <section class="section" id="metodo">
+    <section class="section section--alt" id="metodo">
       <div class="wrap">
         <p class="eyebrow">Como fazemos</p>
         <h2>Um método em cinco fases</h2>
@@ -226,7 +290,7 @@
     </section>
 
     <!-- Planos -->
-    <section class="section section--alt" id="planos">
+    <section class="section" id="planos">
       <div class="wrap">
         <p class="eyebrow">Planos</p>
         <h2>TI completa por uma mensalidade previsível</h2>
@@ -277,7 +341,7 @@
     </section>
 
     <!-- Plataformas -->
-    <section class="section section--tight" id="plataformas">
+    <section class="section section--tight section--alt" id="plataformas">
       <div class="wrap">
         <p class="eyebrow center">Trabalhamos com as principais plataformas do mercado</p>
         <ul class="logos">
@@ -334,9 +398,31 @@
   </main>
 
   <footer class="footer">
-    <div class="wrap footer__inner">
+    <div class="wrap footer__grid">
+      <div>
+        <a class="brand brand--light" href="#topo" aria-label="Performa Cloud, voltar ao topo">
+          <img src="/assets/img/logo.png" alt="" width="40" height="31">
+          <span>Performa <strong>Cloud</strong></span>
+        </a>
+        <p>TI completa por assinatura para pequenas e médias empresas.</p>
+      </div>
+      <nav aria-label="Rodapé">
+        <p class="footer__title">Site</p>
+        <a href="#solucoes">Soluções</a>
+        <a href="#planos">Planos</a>
+        <a href="#videos">Vídeos</a>
+        <a href="/privacidade">Privacidade</a>
+      </nav>
+      <div>
+        <p class="footer__title">Contato</p>
+        <a href="https://wa.me/5511969449185" rel="noopener">WhatsApp (11) 9 6944-9185</a>
+        <a href="tel:+551150430972">(11) 5043-0972</a>
+        <a href="mailto:atendimento@performacloud.com.br">atendimento@performacloud.com.br</a>
+        <span>Av. Paulista, 302 · São Paulo, SP</span>
+      </div>
+    </div>
+    <div class="wrap footer__base">
       <p>© <span id="ano">2026</span> Performa Cloud. Seu negócio na nuvem, sempre seguro e acessível.</p>
-      <nav aria-label="Rodapé"><a href="/privacidade">Privacidade</a> · <a href="#topo">Voltar ao topo</a></nav>
     </div>
   </footer>
 
