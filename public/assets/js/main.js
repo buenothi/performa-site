@@ -85,6 +85,15 @@
     });
   });
 
+  // Interesse em um serviço (ex.: IA) já entra na mensagem
+  document.querySelectorAll('[data-interesse]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      if (!form) return;
+      var msg = form.elements.mensagem;
+      if (!msg.value) msg.value = 'Tenho interesse em ' + a.dataset.interesse + '.';
+    });
+  });
+
   // Envio do formulário
   if (form) {
     var status = form.querySelector('.form__status');
