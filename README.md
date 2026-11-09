@@ -27,6 +27,16 @@ public/robots.txt, public/sitemap.xml
 4. Em **Settings > Domains & Routes > Add > Custom domain**, adicione `www.performacloud.com.br` e `performacloud.com.br` (o DNS do domínio precisa estar na Cloudflare).
 5. Cadastre o site no Google Search Console e envie o `sitemap.xml`.
 
+## Vídeos explicativos
+
+A seção `#videos` do `public/index.html` lista os vídeos. O primeiro aparece em destaque; os seguintes entram numa grade que se ajusta sozinha.
+
+Para publicar um vídeo do YouTube, preencha `data-youtube` com o id dele (o trecho depois de `v=` ou de `youtu.be/`). A miniatura vem do próprio YouTube, e o player (`youtube-nocookie.com`) só carrega quando a pessoa clica. Para um vídeo novo, copie um `<article class="video">`, troque título, descrição e duração, e apague um dos cartões "Novo vídeo em produção".
+
+Para hospedar o arquivo no próprio site em vez do YouTube, coloque o `.mp4` em `public/assets/video/` e use `data-src="/assets/video/nome.mp4"` (opcional: `data-poster` com uma imagem de capa). O limite da Cloudflare é 25 MB por arquivo, então o YouTube é o caminho recomendado.
+
+Se usar outro serviço (Vimeo, por exemplo), libere o domínio em `frame-src` no `public/_headers`.
+
 ## Testar localmente
 
 ```
@@ -37,4 +47,5 @@ npx wrangler dev --var WEBHOOK_URL:http://127.0.0.1:9999/hook
 
 - Conferir o texto da política de privacidade, principalmente o prazo de guarda de 12 meses, que é uma sugestão.
 - Plataformas aparecem como nomes; os logos podem ser trocados por imagens se houver autorização de uso de marca.
+- Vídeo em destaque: falta o id do YouTube do primeiro vídeo (`data-youtube` vazio deixa o cartão como "Em breve").
 - Não há analytics. Se quiser, o Cloudflare Web Analytics pode ser ativado no painel, sem cookies.
