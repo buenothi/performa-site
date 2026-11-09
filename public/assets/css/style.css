@@ -257,8 +257,15 @@ p { margin: 0 0 1em; }
 
 /* Plataformas */
 .logos { list-style: none; padding: 0; margin: 1.2rem 0 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 12px; }
-.logos { gap: 14px 36px; }
-.logos li { font-weight: 700; color: #6b7280; font-size: 1.02rem; letter-spacing: -.01em; }
+.marquee { overflow: hidden; margin-top: 1.4rem; mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); }
+.marquee__track { display: flex; width: max-content; animation: marquee 40s linear infinite; }
+.marquee:hover .marquee__track { animation-play-state: paused; }
+.marquee .logos { margin: 0; flex-wrap: nowrap; gap: 0; }
+.marquee .logos li { padding: 0 28px; white-space: nowrap; font-weight: 800; font-size: clamp(1.1rem, 2vw, 1.45rem); letter-spacing: -.02em; color: #6b7280; transition: color .2s; position: relative; }
+.marquee .logos li::after { content: ""; position: absolute; right: -3px; top: 50%; width: 6px; height: 6px; margin-top: -3px; border-radius: 50%; background: var(--brand); opacity: .5; }
+.marquee .logos li:hover { color: var(--ink); }
+@keyframes marquee { to { transform: translateX(-50%); } }
+.footer__legal { margin-top: 8px !important; font-size: .8rem; color: #6b7280; max-width: 80ch; }
 
 /* Contato */
 .mini-steps { padding-left: 1.2em; margin: 1.2rem 0; display: grid; gap: 10px; color: #c9cdd5; }
@@ -346,6 +353,11 @@ p { margin: 0 0 1em; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .marquee { mask-image: none; -webkit-mask-image: none; }
+  .marquee__track { animation: none; width: auto; }
+  .marquee .logos { flex-wrap: wrap; justify-content: center; row-gap: 10px; }
+  .marquee .logos[aria-hidden] { display: none; }
+  .marquee .logos li:last-child::after { display: none; }
   .front *, .js .reveal { animation: none !important; transition: none !important; opacity: 1 !important; transform: none !important; stroke-dashoffset: 0 !important; }
   .hero__glow, .hero__scroll span, .hero--impact .hero__grid > div:first-child > *, .hero--impact .hero__art { animation: none !important; }
   * { transition: none !important; }

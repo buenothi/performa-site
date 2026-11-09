@@ -42,8 +42,8 @@
   }
   </script>
 
-  <link rel="stylesheet" href="/assets/css/style.css?v=20261109f">
-  <script src="/assets/js/main.js?v=20261109f" defer></script>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20261109g">
+  <script src="/assets/js/main.js?v=20261109g" defer></script>
 </head>
 <body>
   <a class="skip" href="#conteudo">Pular para o conteúdo</a>
@@ -409,11 +409,14 @@
     <section class="section section--tight section--alt" id="plataformas">
       <div class="wrap">
         <p class="eyebrow center">Trabalhamos com as principais plataformas do mercado</p>
-        <ul class="logos">
-          <li>AWS</li><li>Microsoft Azure</li><li>Google Cloud</li><li>Microsoft 365</li>
-          <li>Dynamics 365</li><li>Bitrix24</li><li>3CX</li><li>DirectCall</li>
-          <li>Zendesk</li><li>Twilio</li><li>Zapier</li><li>Power Automate</li>
-        </ul>
+        <!-- Só os nomes, sem logotipos: o uso de marca de terceiros exige parceria formal.
+             A lista aparece duas vezes para o movimento ser contínuo; a cópia fica oculta para leitores de tela. -->
+        <div class="marquee">
+          <div class="marquee__track">
+            <ul class="logos" aria-label="Plataformas"><li>AWS</li><li>Microsoft Azure</li><li>Google Cloud</li><li>Microsoft 365</li><li>Dynamics 365</li><li>Bitrix24</li><li>3CX</li><li>DirectCall</li><li>Zendesk</li><li>Twilio</li><li>Zapier</li><li>Power Automate</li></ul>
+            <ul class="logos" aria-hidden="true"><li>AWS</li><li>Microsoft Azure</li><li>Google Cloud</li><li>Microsoft 365</li><li>Dynamics 365</li><li>Bitrix24</li><li>3CX</li><li>DirectCall</li><li>Zendesk</li><li>Twilio</li><li>Zapier</li><li>Power Automate</li></ul>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -488,6 +491,7 @@
     </div>
     <div class="wrap footer__base">
       <p>© <span id="ano">2026</span> Performa Cloud. Seu negócio na nuvem, sempre seguro e acessível.</p>
+      <p class="footer__legal">Os nomes de produtos e plataformas citados pertencem aos seus respectivos titulares e são mencionados apenas para indicar as tecnologias com que trabalhamos.</p>
     </div>
   </footer>
 
