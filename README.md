@@ -47,5 +47,4 @@ npx wrangler dev --var WEBHOOK_URL:http://127.0.0.1:9999/hook
 
 - Conferir o texto da política de privacidade, principalmente o prazo de guarda de 12 meses, que é uma sugestão.
 - Plataformas aparecem como nomes; os logos podem ser trocados por imagens se houver autorização de uso de marca.
-- Vídeo em destaque: falta o id do YouTube do primeiro vídeo (`data-youtube` vazio deixa o cartão como "Em breve").
 - Não há analytics. Se quiser, o Cloudflare Web Analytics pode ser ativado no painel, sem cookies.
