@@ -1,7 +1,7 @@
-// Cloudflare Pages Function: POST /api/contato
+// POST /api/contato (chamado pelo src/worker.js)
 //
 // Recebe o formulário do site e entrega o contato por um ou pelos dois canais abaixo,
-// conforme as variáveis configuradas no projeto do Cloudflare Pages
+// conforme as variáveis configuradas no Worker
 // (Settings > Variables and Secrets):
 //
 //   RESEND_API_KEY     (secret)  chave da API do Resend para enviar e-mail
@@ -30,7 +30,7 @@ function esc(s) {
   return s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 }
 
-export async function onRequestPost({ request, env }) {
+export async function handleContato(request, env) {
   // Aceita só envios vindos do próprio site
   const origin = request.headers.get('Origin');
   if (origin && new URL(origin).host !== new URL(request.url).host) {
@@ -111,6 +111,6 @@ export async function onRequestPost({ request, env }) {
   return json({ ok: true });
 }
 
-export function onRequest() {
+export function metodoNaoPermitido() {
   return json({ erro: 'use POST' }, 405);
 }
