@@ -1,6 +1,21 @@
 // Performa Cloud: interações do site
 (function () {
   'use strict';
+  document.documentElement.classList.add('js');
+
+  // Entrada dos cartões ao rolar a página
+  var reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.2 });
+    reveals.forEach(function (el) { io.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add('is-visible'); });
+  }
+
 
   // Menu no celular
   var toggle = document.querySelector('.nav-toggle');
