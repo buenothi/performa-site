@@ -147,8 +147,8 @@ p { margin: 0 0 1em; }
 .video__poster, .video__poster img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .video__poster { background: radial-gradient(600px 300px at 80% 0%, rgba(235, 89, 45, .55), transparent 70%), var(--dark); }
 .video__poster::after { content: ""; position: absolute; inset: 0; background: linear-gradient(transparent 55%, rgba(0, 0, 0, .45)); }
-.video__icon { position: absolute; left: 50%; top: 50%; width: 68px; height: 68px; margin: -34px 0 0 -34px; border-radius: 50%; background: var(--brand); display: grid; place-items: center; box-shadow: 0 10px 30px rgba(0, 0, 0, .35); transition: transform .15s, background .15s; z-index: 1; }
-.video__icon svg { width: 30px; height: 30px; fill: #fff; margin-left: 4px; }
+.video__icon { position: absolute; left: 50%; top: 50%; width: 56px; height: 56px; margin: -28px 0 0 -28px; border-radius: 50%; background: var(--brand); display: grid; place-items: center; box-shadow: 0 10px 30px rgba(0, 0, 0, .35); transition: transform .15s, background .15s; z-index: 1; }
+.video__icon svg { width: 24px; height: 24px; fill: #fff; margin-left: 3px; }
 .video__play:not([disabled]):hover .video__icon { transform: scale(1.08); background: var(--brand-dark); }
 .video__play[disabled] .video__icon { display: none; }
 .video__time { position: absolute; right: 12px; bottom: 12px; background: rgba(0, 0, 0, .7); padding: .15em .6em; border-radius: 6px; font-size: .82rem; font-weight: 650; z-index: 1; }
@@ -158,7 +158,10 @@ p { margin: 0 0 1em; }
 .video__tag { display: inline-block; font-size: .78rem; font-weight: 700; color: var(--brand-dark) !important; background: var(--brand-soft); padding: .2em .7em; border-radius: 999px; margin-bottom: .8em; }
 .video--featured { grid-column: 1 / -1; display: grid; grid-template-columns: 1.5fr 1fr; align-items: center; }
 .video--featured .video__body { padding: 28px 32px; }
-.video--featured h3 { font-size: 1.45rem; }
+.video--featured h3 { font-size: 1.35rem; }
+.link-arrow { font-weight: 650; text-decoration: none; }
+.link-arrow::after { content: " →"; }
+.link-arrow:hover { text-decoration: underline; }
 .video--soon .video__frame { display: grid; place-items: center; background: repeating-linear-gradient(135deg, #eef0f3 0 12px, #f6f7f9 12px 24px); }
 .video__soon { font-size: .88rem; font-weight: 650; color: var(--ink-2); background: #fff; border: 1px solid var(--line); padding: .35em .9em; border-radius: 999px; }
 

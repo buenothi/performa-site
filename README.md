@@ -37,6 +37,10 @@ Para hospedar o arquivo no próprio site em vez do YouTube, coloque o `.mp4` em 
 
 Se usar outro serviço (Vimeo, por exemplo), libere o domínio em `frame-src` no `public/_headers`.
 
+## Cache de CSS e JS
+
+Os HTMLs carregam `style.css?v=...` e `main.js?v=...`. **Ao mudar o CSS ou o JS, troque o valor de `v`** em todos os `.html` (por exemplo, para a data do dia). Sem isso, quem já visitou o site pode ver o HTML novo com o CSS antigo, e a página fica quebrada até o cache expirar.
+
 ## Testar localmente
 
 ```

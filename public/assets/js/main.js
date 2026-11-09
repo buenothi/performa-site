@@ -134,6 +134,7 @@
     if (id) {
       var img = card.querySelector('.video__poster img');
       if (img && !card.dataset.poster) {
+        img.addEventListener('error', function () { img.remove(); });
         img.src = 'https://i.ytimg.com/vi/' + id + '/hqdefault.jpg';
         img.removeAttribute('width'); img.removeAttribute('height');
       }
