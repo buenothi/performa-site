@@ -29,7 +29,7 @@ public/robots.txt, public/sitemap.xml
 
 ## Abertura (herói)
 
-A abertura ocupa a tela inteira, com fundo escuro animado só com CSS. Para usar um vídeo de fundo, coloque um loop curto e sem som (10 a 20 s, até ~5 MB, 1280×720) em `public/assets/video/` e preencha `data-video` na `<section class="hero hero--impact">`. O vídeo não carrega para quem pediu movimento reduzido ou economia de dados.
+A abertura ocupa a tela inteira, com fundo escuro animado só com CSS. Para usar um vídeo de fundo, coloque um vídeo curto e sem som (10 a 20 s, até ~5 MB, 1280×720) em `public/assets/video/` e preencha `data-video` na `<section class="hero hero--impact">`. O vídeo toca uma vez e para no último quadro (sem loop). Não carrega para quem pediu movimento reduzido ou economia de dados.
 
 ## Vídeos explicativos
 
