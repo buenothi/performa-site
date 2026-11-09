@@ -143,10 +143,8 @@ p { margin: 0 0 1em; }
 .gains li { background: var(--brand-soft); color: var(--brand-dark); font-weight: 650; font-size: .92rem; padding: .4em .9em; border-radius: 999px; }
 
 /* O que fazemos: mosaico das quatro frentes */
-.bento { display: grid; grid-template-columns: repeat(12, 1fr); gap: 20px; margin-top: 2.2rem; align-items: start; }
+.bento { display: grid; grid-template-columns: repeat(12, 1fr); gap: 20px; margin-top: 2.2rem; align-items: stretch; }
 .front { grid-column: span 6; position: relative; background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 0 28px 26px; overflow: hidden; display: flex; flex-direction: column; transition: transform .25s, box-shadow .25s, border-color .25s; }
-.front--nuvem, .front--ia { grid-column: span 7; }
-.front--gestao, .front--cliente { grid-column: span 5; }
 .front:hover { transform: translateY(-4px); box-shadow: 0 24px 48px -24px rgba(21, 25, 34, .25); border-color: #f3c7b8; }
 .front__art { margin: 0 -28px 18px; height: 170px; display: grid; place-items: center; background: radial-gradient(260px 140px at 70% 30%, rgba(235, 89, 45, .16), transparent 70%), linear-gradient(180deg, #fff6f2, #fff); border-bottom: 1px solid #f6e3dc; }
 .front--ia .front__art, .front--nuvem .front__art { background: radial-gradient(320px 160px at 70% 30%, rgba(235, 89, 45, .35), transparent 70%), #151922; border-bottom-color: #151922; }
