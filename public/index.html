@@ -42,8 +42,8 @@
   }
   </script>
 
-  <link rel="stylesheet" href="/assets/css/style.css?v=20261109d">
-  <script src="/assets/js/main.js?v=20261109d" defer></script>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20261109e">
+  <script src="/assets/js/main.js?v=20261109e" defer></script>
 </head>
 <body>
   <a class="skip" href="#conteudo">Pular para o conteúdo</a>
@@ -174,55 +174,107 @@
       </div>
     </section>
 
-    <!-- Soluções -->
-    <section class="section" id="solucoes">
+    <!-- Soluções: mosaico com as quatro frentes. Cada cartão tem uma ilustração animada
+         (SVG + CSS) e os detalhes ficam num <details>, que funciona sem JavaScript. -->
+    <section class="section section--solucoes" id="solucoes">
       <div class="wrap">
         <p class="eyebrow">O que fazemos</p>
         <h2>Quatro frentes, um só parceiro</h2>
-        <div class="tabs" role="tablist" aria-label="Frentes de atuação">
-          <button role="tab" id="t-nuvem" aria-controls="p-nuvem" aria-selected="true">Infraestrutura em nuvem</button>
-          <button role="tab" id="t-gestao" aria-controls="p-gestao" aria-selected="false" tabindex="-1">Produtividade e gestão</button>
-          <button role="tab" id="t-cliente" aria-controls="p-cliente" aria-selected="false" tabindex="-1">Relacionamento com o cliente</button>
-          <button role="tab" id="t-ia" aria-controls="p-ia" aria-selected="false" tabindex="-1">Inteligência artificial</button>
-        </div>
+        <p class="lead">Toda a tecnologia da sua empresa com o mesmo time, do servidor ao atendimento ao cliente.</p>
 
-        <div class="panel" role="tabpanel" id="p-nuvem" aria-labelledby="t-nuvem">
-          <h3>Sua nuvem gerenciada, do provisionamento à entrega contínua</h3>
-          <div class="grid grid--2">
-            <div class="card card--flat"><h4>Cloud gerenciada</h4><p>Provisionamento, manutenção, monitoramento e suporte na AWS, Azure e Google Cloud.</p></div>
-            <div class="card card--flat"><h4>Consultoria DevOps</h4><p>Cultura e práticas DevOps por assinatura, do diagnóstico à melhoria contínua.</p></div>
-          </div>
-          <ul class="gains"><li>Menor custo de TI</li><li>Escala sob demanda</li><li>Entregas mais rápidas</li></ul>
-        </div>
+        <div class="bento">
+          <article class="front front--nuvem reveal">
+            <div class="front__art" aria-hidden="true">
+              <svg viewBox="0 0 240 150">
+                <path class="draw" d="M70 70a28 28 0 0 1 52-14 22 22 0 0 1 38 10 18 18 0 0 1 4 36H74a20 20 0 0 1-4-32z"/>
+                <g class="flow"><path d="M95 108v22"/><path d="M120 108v22"/><path d="M145 108v22"/></g>
+                <g class="srv"><rect x="72" y="130" width="96" height="10" rx="3"/></g>
+                <circle class="blink" cx="160" cy="135" r="2.5"/>
+              </svg>
+            </div>
+            <p class="front__num">01</p>
+            <h3>Infraestrutura em nuvem</h3>
+            <p>Seus servidores e sistemas na AWS, Azure ou Google Cloud, gerenciados do provisionamento à entrega contínua.</p>
+            <ul class="front__tags"><li>Cloud gerenciada</li><li>Consultoria DevOps</li></ul>
+            <details>
+              <summary>Ver detalhes</summary>
+              <ul>
+                <li><strong>Cloud gerenciada:</strong> provisionamento, manutenção, monitoramento e suporte na AWS, Azure e Google Cloud.</li>
+                <li><strong>Consultoria DevOps:</strong> cultura e práticas DevOps por assinatura, do diagnóstico à melhoria contínua.</li>
+              </ul>
+              <p class="front__gains">Menor custo de TI · Escala sob demanda · Entregas mais rápidas</p>
+            </details>
+          </article>
 
-        <div class="panel" role="tabpanel" id="p-gestao" aria-labelledby="t-gestao" hidden>
-          <h3>Sistemas que conversam e equipes mais produtivas</h3>
-          <div class="grid grid--3">
-            <div class="card card--flat"><h4>Microsoft 365</h4><p>Implementação, suporte, segurança e adoção do seu ambiente.</p></div>
-            <div class="card card--flat"><h4>ERP</h4><p>Bitrix24 e Dynamics 365 Business Central, da licença ao suporte, com parceiros implantadores certificados.</p></div>
-            <div class="card card--flat"><h4>Integrações e automações</h4><p>Zapier e Power Automate conectando sistemas e eliminando tarefas manuais.</p></div>
-          </div>
-          <ul class="gains"><li>Menos trabalho manual</li><li>Informação integrada</li><li>Acesso de qualquer lugar</li></ul>
-        </div>
+          <article class="front front--gestao reveal">
+            <div class="front__art" aria-hidden="true">
+              <svg viewBox="0 0 240 150">
+                <rect class="draw" x="50" y="22" width="140" height="106" rx="10"/>
+                <path d="M50 42h140"/>
+                <g class="tiles"><rect x="64" y="56" width="32" height="24" rx="5"/><rect x="104" y="56" width="32" height="24" rx="5"/><rect x="144" y="56" width="32" height="24" rx="5"/><rect x="64" y="88" width="32" height="24" rx="5"/><rect x="104" y="88" width="32" height="24" rx="5"/></g>
+                <path class="check" d="M150 100l8 8 16-18"/>
+              </svg>
+            </div>
+            <p class="front__num">02</p>
+            <h3>Produtividade e gestão</h3>
+            <p>Microsoft 365, ERP e automações para os sistemas conversarem e a equipe parar de repetir tarefas.</p>
+            <ul class="front__tags"><li>Microsoft 365</li><li>ERP</li><li>Automações</li></ul>
+            <details>
+              <summary>Ver detalhes</summary>
+              <ul>
+                <li><strong>Microsoft 365:</strong> implementação, suporte, segurança e adoção do seu ambiente.</li>
+                <li><strong>ERP:</strong> Bitrix24 e Dynamics 365 Business Central, da licença ao suporte, com parceiros implantadores certificados.</li>
+                <li><strong>Integrações e automações:</strong> Zapier e Power Automate conectando sistemas e eliminando tarefas manuais.</li>
+              </ul>
+              <p class="front__gains">Menos trabalho manual · Informação integrada · Acesso de qualquer lugar</p>
+            </details>
+          </article>
 
-        <div class="panel" role="tabpanel" id="p-cliente" aria-labelledby="t-cliente" hidden>
-          <h3>Atendimento rápido em todos os canais</h3>
-          <div class="grid grid--2">
-            <div class="card card--flat"><h4>PABX em nuvem</h4><p>PABX 3CX com ligações pela DirectCall: franquia mensal de minutos, ramais, filas, atendimento automático, gravação e app no celular, sem comprar equipamentos.</p></div>
-            <div class="card card--flat"><h4>Customer Experience</h4><p>Zendesk e Twilio para centralizar voz, chat, e-mail e redes sociais.</p></div>
-          </div>
-          <ul class="gains"><li>Sem investimento inicial</li><li>Menos espera</li><li>Proteção contra fraude</li></ul>
-        </div>
+          <article class="front front--cliente reveal">
+            <div class="front__art" aria-hidden="true">
+              <svg viewBox="0 0 240 150">
+                <g class="waves"><circle cx="96" cy="78" r="22"/><circle cx="96" cy="78" r="22"/><circle cx="96" cy="78" r="22"/></g>
+                <path class="phone" d="M86 64c-3 0-6 3-5 7 3 13 12 22 25 25 4 1 7-2 7-5v-5l-8-3-4 4c-5-2-9-6-11-11l4-4-3-8z"/>
+                <g class="bubble"><path d="M136 40h60a8 8 0 0 1 8 8v26a8 8 0 0 1-8 8h-40l-14 12v-12h-6a8 8 0 0 1-8-8V48a8 8 0 0 1 8-8z"/><circle cx="152" cy="61" r="3"/><circle cx="166" cy="61" r="3"/><circle cx="180" cy="61" r="3"/></g>
+              </svg>
+            </div>
+            <p class="front__num">03</p>
+            <h3>Relacionamento com o cliente</h3>
+            <p>Telefone em nuvem e atendimento em todos os canais, sem comprar aparelho e sem deixar cliente esperando.</p>
+            <ul class="front__tags"><li>PABX em nuvem</li><li>Customer Experience</li></ul>
+            <details>
+              <summary>Ver detalhes</summary>
+              <ul>
+                <li><strong>PABX em nuvem:</strong> PABX 3CX com ligações pela DirectCall: franquia mensal de minutos, ramais, filas, atendimento automático, gravação e app no celular, sem comprar equipamentos.</li>
+                <li><strong>Customer Experience:</strong> Zendesk e Twilio para centralizar voz, chat, e-mail e redes sociais.</li>
+              </ul>
+              <p class="front__gains">Sem investimento inicial · Menos espera · Proteção contra fraude</p>
+            </details>
+          </article>
 
-        <div class="panel" role="tabpanel" id="p-ia" aria-labelledby="t-ia" hidden>
-          <h3>IA aplicada ao seu negócio</h3>
-          <div class="grid grid--2">
-            <div class="card card--flat"><h4>Automação inteligente</h4><p>Agentes de IA que executam tarefas repetitivas e conectam sistemas, 24 horas por dia.</p></div>
-            <div class="card card--flat"><h4>Assistente de conhecimento</h4><p>Respostas na hora a partir de manuais, contratos e documentos internos, em ambiente privado.</p></div>
-            <div class="card card--flat"><h4>Digitalização com OCR e IA</h4><p>Notas, contratos e formulários lidos, classificados e enviados aos seus sistemas.</p></div>
-            <div class="card card--flat"><h4>CRM com IA</h4><p>Assistentes virtuais no atendimento, priorização de leads e previsão de vendas.</p></div>
-          </div>
-          <ul class="gains"><li>Mais produtividade</li><li>Respostas em segundos</li><li>Dados protegidos (LGPD)</li></ul>
+          <article class="front front--ia reveal">
+            <div class="front__art" aria-hidden="true">
+              <svg viewBox="0 0 240 150">
+                <g class="net"><path d="M120 75L64 40M120 75L176 36M120 75L60 112M120 75L182 110M64 40L60 112M176 36L182 110"/></g>
+                <g class="nodes"><circle cx="64" cy="40" r="6"/><circle cx="176" cy="36" r="6"/><circle cx="60" cy="112" r="6"/><circle cx="182" cy="110" r="6"/></g>
+                <path class="spark" d="M120 52l6 17 17 6-17 6-6 17-6-17-17-6 17-6z"/>
+              </svg>
+            </div>
+            <p class="front__num">04</p>
+            <h3>Inteligência artificial</h3>
+            <p>Agentes e assistentes de IA que atendem, leem documentos e executam tarefas repetitivas, em ambiente privado.</p>
+            <ul class="front__tags"><li>Agentes de IA</li><li>WhatsApp com IA</li><li>OCR</li><li>CRM com IA</li></ul>
+            <details>
+              <summary>Ver detalhes</summary>
+              <ul>
+                <li><strong>Automação inteligente:</strong> agentes de IA que executam tarefas repetitivas e conectam sistemas, 24 horas por dia.</li>
+                <li><strong>Assistente de conhecimento:</strong> respostas na hora a partir de manuais, contratos e documentos internos, em ambiente privado.</li>
+                <li><strong>Digitalização com OCR e IA:</strong> notas, contratos e formulários lidos, classificados e enviados aos seus sistemas.</li>
+                <li><strong>CRM com IA:</strong> assistentes virtuais no atendimento, priorização de leads e previsão de vendas.</li>
+              </ul>
+              <p class="front__gains">Mais produtividade · Respostas em segundos · Dados protegidos (LGPD)</p>
+            </details>
+          </article>
         </div>
       </div>
     </section>
