@@ -170,7 +170,11 @@
     var v = document.createElement('video');
     v.src = heroVideo; v.muted = true; v.loop = true; v.autoplay = true; v.playsInline = true;
     v.setAttribute('aria-hidden', 'true');
-    hero.querySelector('.hero__bg').appendChild(v);
+    v.className = 'hero__video';
+    if (hero.dataset.poster) v.poster = hero.dataset.poster;
+    hero.insertBefore(v, hero.firstChild);
+    var p = v.play && v.play();
+    if (p && p.catch) p.catch(function () {});
   }
 
   var ano = document.getElementById('ano');
