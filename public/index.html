@@ -42,8 +42,8 @@
   }
   </script>
 
-  <link rel="stylesheet" href="/assets/css/style.css?v=20261109b">
-  <script src="/assets/js/main.js?v=20261109b" defer></script>
+  <link rel="stylesheet" href="/assets/css/style.css?v=20261109c">
+  <script src="/assets/js/main.js?v=20261109c" defer></script>
 </head>
 <body>
   <a class="skip" href="#conteudo">Pular para o conteúdo</a>
@@ -71,11 +71,15 @@
   <main id="conteudo">
 
     <!-- Abertura -->
-    <section class="hero">
+    <!-- Abertura em tela cheia, fundo escuro animado.
+         Para usar um vídeo de fundo (loop curto, sem som, até ~5 MB), coloque o arquivo
+         em /assets/video/ e preencha data-video, por exemplo data-video="/assets/video/hero.mp4". -->
+    <section class="hero hero--impact" data-video="">
+      <div class="hero__bg" aria-hidden="true"><span class="hero__glow hero__glow--a"></span><span class="hero__glow hero__glow--b"></span></div>
       <div class="wrap hero__grid">
         <div>
           <p class="eyebrow">TI completa por assinatura</p>
-          <h1>Seu negócio na nuvem, sempre seguro e acessível</h1>
+          <h1>Seu negócio na <span class="hl">nuvem</span>, sempre seguro e acessível</h1>
           <p class="lead">Nuvem, IA, telefonia e gestão para pequenas e médias empresas, com um só parceiro e uma mensalidade previsível.</p>
           <div class="hero__cta">
             <a class="btn" href="#contato">Quero um diagnóstico gratuito</a>
@@ -108,6 +112,15 @@
           </div>
         </div>
       </div>
+      <div class="wrap">
+        <ul class="hero__stats" aria-label="A Performa em números">
+          <li><strong>4</strong><span>frentes de tecnologia</span></li>
+          <li><strong>3</strong><span>nuvens: AWS, Azure, Google</span></li>
+          <li><strong>5</strong><span>fases de método</span></li>
+          <li><strong>1</strong><span>parceiro e uma mensalidade</span></li>
+        </ul>
+      </div>
+      <a class="hero__scroll" href="#desafio" aria-label="Rolar para o conteúdo"><span></span></a>
     </section>
 
     <!-- O desafio -->

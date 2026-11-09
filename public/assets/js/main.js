@@ -160,6 +160,19 @@
     });
   });
 
+  // Vídeo de fundo opcional na abertura (só se data-video estiver preenchido,
+  // sem movimento reduzido e sem economia de dados).
+  var hero = document.querySelector('.hero[data-video]');
+  var heroVideo = hero && hero.dataset.video.trim();
+  var calm = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var saveData = navigator.connection && navigator.connection.saveData;
+  if (heroVideo && !calm && !saveData) {
+    var v = document.createElement('video');
+    v.src = heroVideo; v.muted = true; v.loop = true; v.autoplay = true; v.playsInline = true;
+    v.setAttribute('aria-hidden', 'true');
+    hero.querySelector('.hero__bg').appendChild(v);
+  }
+
   var ano = document.getElementById('ano');
   if (ano) ano.textContent = new Date().getFullYear();
 })();

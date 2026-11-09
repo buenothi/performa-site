@@ -27,6 +27,10 @@ public/robots.txt, public/sitemap.xml
 4. Em **Settings > Domains & Routes > Add > Custom domain**, adicione `www.performacloud.com.br` e `performacloud.com.br` (o DNS do domínio precisa estar na Cloudflare).
 5. Cadastre o site no Google Search Console e envie o `sitemap.xml`.
 
+## Abertura (herói)
+
+A abertura ocupa a tela inteira, com fundo escuro animado só com CSS. Para usar um vídeo de fundo, coloque um loop curto e sem som (10 a 20 s, até ~5 MB, 1280×720) em `public/assets/video/` e preencha `data-video` na `<section class="hero hero--impact">`. O vídeo não carrega para quem pediu movimento reduzido ou economia de dados.
+
 ## Vídeos explicativos
 
 A seção `#videos` do `public/index.html` lista os vídeos. O primeiro aparece em destaque; os seguintes entram numa grade que se ajusta sozinha.
