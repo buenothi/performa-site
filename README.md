@@ -9,7 +9,8 @@ wrangler.jsonc               configuração do Worker (nome, pasta de arquivos, 
 src/worker.js                entrada do Worker: /api/contato ou arquivos estáticos
 src/contato.js               tratamento do formulário (POST /api/contato)
 public/index.html            página principal (todas as seções)
-public/privacidade.html      política de privacidade (LGPD), servida em /privacidade
+public/privacy.html          política de privacidade (LGPD), servida em /privacy
+public/_redirects            /privacidade (endereço antigo) redireciona para /privacy
 public/404.html              página de erro
 public/assets/               CSS, JS, logo e ícones
 public/_headers              cabeçalhos de segurança e cache
@@ -53,6 +54,6 @@ npx wrangler dev --var WEBHOOK_URL:http://127.0.0.1:9999/hook
 
 ## Pendências de conteúdo
 
-- Conferir o texto da política de privacidade, principalmente o prazo de guarda de 12 meses, que é uma sugestão.
+- Política de privacidade (/privacy): preencher razão social, CNPJ, encarregado e e-mail de privacidade (trechos destacados em amarelo) e conferir o prazo de guarda de 12 meses, que é uma sugestão.
 - Plataformas aparecem como nomes; os logos podem ser trocados por imagens se houver autorização de uso de marca.
 - Não há analytics. Se quiser, o Cloudflare Web Analytics pode ser ativado no painel, sem cookies.
